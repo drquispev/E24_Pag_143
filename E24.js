@@ -132,12 +132,27 @@ function Desarrollo_E24(Numero,Media,Desviacion_E,Costo_U,Precio_VU,Descuento){
     console.log(VA);
 
     // ------------------------------------------------------------------------------- >
-    // TABLA - DOM 
+    
+    
+    // DOM 
 	var Contenedor = document.getElementById("Resolucion");
+    // TITULO - DOM 
+	var Contenedor_Titulo = document.createElement("div");
+    Contenedor_Titulo.className = "Contenedor_Titulo";
+    
+	var Etiqueta_Titulo = document.createElement("h1");
+    Etiqueta_Titulo.className = "Etiqueta_Paso_T";
+    Etiqueta_Titulo.textContent = "RESOLUCIÓN";
+    
+	Contenedor_Titulo.appendChild(Etiqueta_Titulo);
 
+	Contenedor.appendChild(Contenedor_Titulo);
+    // TABLA - DOM 
 	var Contenedor_Tabla = document.createElement("div");
-	var Tabla = document.createElement("table");
+	Contenedor_Tabla.className = "Contenedor_Tabla";
+    var Tabla = document.createElement("table");
 	Tabla.id = "Tabla_E22";
+    
 
 	// CABECERAS - DOM 
 	var Tabla_Fila_Head = document.createElement("tr");
@@ -178,6 +193,46 @@ function Desarrollo_E24(Numero,Media,Desviacion_E,Costo_U,Precio_VU,Descuento){
 	Contenedor_Tabla.appendChild(Tabla);
 	Contenedor.appendChild(Contenedor_Tabla);
 
+    // RESULTADOS
+    var Contenedor_R = document.createElement("div");
+	Contenedor_R.className = "RESULTADOS";
+
+    // Con Desc.
+    var Contenedor_CD = document.createElement("div");
+    Contenedor_CD.className = "Contenedor_CD";
+    
+	var Etiqueta_CD = document.createElement("h3");
+    Etiqueta_CD.className = "Etiqueta_Paso_CD";
+    Etiqueta_CD.textContent = "Con Desc."
+    
+	var CD_Resultado = document.createElement("h3");
+    CD_Resultado.className = "Resultado_Paso_CD";
+    CD_Resultado.textContent = `${Cont_Desc}`;
+    
+	Contenedor_CD.appendChild(Etiqueta_CD);
+    Contenedor_CD.appendChild(CD_Resultado);
+
+	Contenedor_R.appendChild(Contenedor_CD);
+    Contenedor.appendChild(Contenedor_R);
+
+    //Sin Desc.
+    var Contenedor_CSD = document.createElement("div");
+    Contenedor_CSD.className = "Contenedor_CSD";
+    
+	var Etiqueta_CSD = document.createElement("h3");
+    Etiqueta_CSD.className = "Etiqueta_Paso_CSD";
+    Etiqueta_CSD.textContent = "Sin Desc."
+    
+	var CSD_Resultado = document.createElement("h3");
+    CSD_Resultado.className = "Resultado_Paso_CSD";
+    CSD_Resultado.textContent = `${Cont_Sin_Desc}`;
+    
+	Contenedor_CSD.appendChild(Etiqueta_CSD);
+    Contenedor_CSD.appendChild(CSD_Resultado);
+
+	Contenedor_R.appendChild(Contenedor_CSD);
+    Contenedor.appendChild(Contenedor_R);
+    
     //------------------------------------------------------------------------------- >
 
     // a) Cantidad de difuntos q tendran Desc.
@@ -189,6 +244,45 @@ function Desarrollo_E24(Numero,Media,Desviacion_E,Costo_U,Precio_VU,Descuento){
 
     let Utilidad_Promedio = ASD + ACD;
     console.log(`ACD: ${ACD} \n ASD: ${ASD} \n UP:${Utilidad_Promedio}`)
+
+    // ACD
+    var Contenedor_R2 = document.createElement("div");
+	Contenedor_R2.className = "RESULTADOS";
+
+    var Contenedor_ACD = document.createElement("div");
+    Contenedor_ACD.className = "Contenedor_ACD";
+    
+	var Etiqueta_ACD = document.createElement("h3");
+    Etiqueta_ACD.className = "Etiqueta_Paso_ACD";
+    Etiqueta_ACD.textContent = "Ataúdes Con Descuento"
+    
+	var ACD_Resultado = document.createElement("h3");
+    ACD_Resultado.className = "Resultado_Paso_ACD";
+    ACD_Resultado.textContent = `$ ${ACD}`;
+    
+	Contenedor_ACD.appendChild(Etiqueta_ACD);
+    Contenedor_ACD.appendChild(ACD_Resultado);
+
+	Contenedor_R2.appendChild(Contenedor_ACD);
+    Contenedor.appendChild(Contenedor_R2);
+
+    // ASD
+    var Contenedor_ASD = document.createElement("div");
+    Contenedor_ASD.className = "Contenedor_CSD";
+    
+	var Etiqueta_ASD = document.createElement("h3");
+    Etiqueta_ASD.className = "Etiqueta_Paso_CSD";
+    Etiqueta_ASD.textContent = "Ataúdes Sin Descuento"
+    
+	var ASD_Resultado = document.createElement("h3");
+    ASD_Resultado.className = "Resultado_Paso_ASD";
+    ASD_Resultado.textContent = `$ ${ASD}`;
+    
+	Contenedor_ASD.appendChild(Etiqueta_ASD);
+    Contenedor_ASD.appendChild(ASD_Resultado);
+
+	Contenedor_R2.appendChild(Contenedor_ASD);
+    Contenedor.appendChild(Contenedor_R2);
 }
 
 Desarrollo_E24(500,1.65,0.05,3000,8000,0.05);

@@ -1,0 +1,130 @@
+body {
+    height: 100%;
+    background: orange;
+    color: #000;
+    font-family: 'Comic Neue', cursive;
+    justify-content: center;
+}
+
+.FONDO {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    margin: 15px;
+}
+
+.Enunciado {
+    width: 1310px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Contenedor_h1 {
+    position: relative;
+    border: 4px solid black;
+    
+    background-color: black;
+    color: whitesmoke;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.Contenedor_p {
+    position: relative;
+    border: 4px solid black;
+    background-color: whitesmoke;
+    
+    padding: 10px;
+    justify-content: baseline;
+}
+
+.Resolucion {
+    width: 1310px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+    padding: 10px;
+}
+
+.Contenedor_Titulo {
+    position: relative;
+    border: 4px solid black;
+    
+    width: 1310px;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Contenedor_Tabla {
+    max-width: 100%;
+    height: 280px;
+    overflow: auto;
+    border: 1px solid red;
+
+    display: flex;
+    padding: 10px;
+    margin: 0;
+
+}
+
+.Tabla_E22 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid purple;
+}
+
+.Celda_Head {
+    width: 400px;
+    height: 20px;
+    background-color: black;
+    color: whitesmoke;
+    border: 4px solid black;
+    border-radius: 5px;
+    font-size: 1.1em;
+    padding: 5px;
+    margin: 0;
+
+    text-align: center;
+}
+
+.Celda_Date {
+    width: 80px;
+    height: 20px;
+    background-color: whitesmoke;
+    color: black;
+    border: 4px solid black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    justify-content: center;
+}
+
+.RESULTADOS {
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    
+    border: 4px solid black;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
